@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+    <h2>Login Page</h2>
+    <form id="loginForm" onsubmit="handleLogin(event)">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            // Predefined username and password
+            const validUsername = "admin";
+            const validPassword = "password";
+
+            // Debugging logs
+            console.log("Entered Username:", username);
+            console.log("Entered Password:", password);
+            console.log("Valid Username:", validUsername);
+            console.log("Valid Password:", validPassword);
+
+            if (username === validUsername && password === validPassword) {
+                alert("Login successful!");
+                window.location.href = "huh.html";
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+    </script>
+    
+</body>
+</html>

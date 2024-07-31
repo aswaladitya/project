@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="location">
+        <input type="button" value="Click" onclick="askForLocation()">
+    </div>
+
+    <script>
+        function askForLocation() {
+            let location = prompt("Please enter your location:");
+            if (location.toLowerCase() === "chandigarh" || location.toLowerCase() === "punjab" || location.toLowerCase() === "haryana") {
+                alert("You entered: " + location + ". You are allowed.");
+                window.location.href = "submit_login.html"; // Redirect to login page
+            } else {
+                alert("You are not allowed.");
+            }
+        }
+    </script>
+    
+</body>
+</html>
